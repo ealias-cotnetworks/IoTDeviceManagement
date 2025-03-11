@@ -33,7 +33,7 @@ services:
     depends_on:
       - db
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:3306/IoTdevicemanagement
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/IoTdevicemanagement
       - SPRING_DATASOURCE_USERNAME=mysql
       - SPRING_DATASOURCE_PASSWORD=root
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
