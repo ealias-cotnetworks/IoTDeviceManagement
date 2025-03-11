@@ -25,26 +25,26 @@ services:
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
 
 
-  app:
-    image: mysql:latest
-    build:
-      context: .
-    container_name: some-mysql
-    depends_on:
-      - db
-    environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/IoTdevicemanagement
-      - SPRING_DATASOURCE_USERNAME=mysql
-      - SPRING_DATASOURCE_PASSWORD=root
-      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+  # app:
+  #   image: mysql:latest
+  #   build:
+  #     context: .
+  #   container_name: some-mysql
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/IoTdevicemanagement
+  #     - SPRING_DATASOURCE_USERNAME=mysql
+  #     - SPRING_DATASOURCE_PASSWORD=root
+  #     - SPRING_JPA_HIBERNATE_DDL_AUTO=update
 
-  db:
-    image: mysql:latest
-    container_name: pinkFlamingosContainer
-    ports:
-      - "3306:3306"
-    environment:
-      - MYSQL_ROOT_PASSWORD=mysql
-      - MYSQL_DATABASE=pinkFlamingosDatabase
-    volumes:
-          - /Users/victoria.kruczek/Desktop/Projekty/pinkFlamingos/db:/var/lib/mysql
+  # db:
+  #   image: mysql:latest
+  #   container_name: pinkFlamingosContainer
+  #   ports:
+  #     - "3306:3306"
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=mysql
+  #     - MYSQL_DATABASE=pinkFlamingosDatabase
+  #   volumes:
+  #         - /Users/victoria.kruczek/Desktop/Projekty/pinkFlamingos/db:/var/lib/mysql
